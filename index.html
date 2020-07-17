@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <script src="src/decisionTree.js"></script>
+    <script src="src/index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div
+      class="d-flex align-items-center flex-column justify-content-center h-100 bg-dark text-white"
+    >
+      <form>
+        <h1>
+          <div
+            class="form-group custom-control custom-switch custom-switch-adaptive"
+          >
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="prediction"
+            />
+            <label class="custom-control-label" for="prediction">Predict</label>
+          </div>
+        </h1>
+      </form>
+
+      <div class="alert alert-secondary" role="alert" id="data">
+        Toggle "Predict" ...
+      </div>
+      <div class="alert alert-secondary" role="alert" id="result">
+        ... to make predictions
+      </div>
+      <h1>
+        <div class="form-group">
+          <button id="request" type="button" class="btn btn-danger">
+            Request Permission
+          </button>
+        </div>
+      </h1>
+      <h1>
+        <div class="form-group">
+          <button id="showVideo" type="button" class="btn btn-primary">
+            Show Video
+          </button>
+        </div>
+      </h1>
+    </div>
+    <!-- The Modal -->
+    <div id="videoModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <video class="center" width="160" height="120" id="myVideo" controls>
+          <source
+            id="mp4_src"
+            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </div>
+  </body>
+</html>

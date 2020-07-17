@@ -1,0 +1,91 @@
+//@import "~bootstrap/scss/bootstrap"; 
+
+$text-muted: #6C757D;
+$light: #F8F9FA;
+$white: #FFF;
+$success: #28a745;
+
+.custom-switch.custom-switch-adaptive {
+  padding-left: 0;
+
+  .custom-control-label {
+    padding: 0 1.5em;
+    position: relative;
+    border-radius: 1em;
+    line-height: 1.4em;
+    color: $text-muted;
+    border: 1px solid $text-muted;
+    background-color: $light;
+    transition: background-color 200ms;
+
+    &::before {
+      content: none;
+    }
+    &::after {
+      position: absolute;
+      height: 1em;
+      top: 0.2em;
+      left: 0.2em;
+      width: 1em;
+      border-radius: 1em;
+
+      transition: left 200ms;
+    }
+  }
+
+
+  .custom-control-input:checked ~ .custom-control-label {
+    color: $white;
+    background-color: $success;
+    border-color: $success;
+
+    &::after {
+      background-color: $white;
+      left: calc(100% - 1.2em);
+
+      transform: none;
+      -webkit-transform: none;
+    }
+  }
+}
+
+.center { margin: 0 auto; width: 180px; }
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content { 
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

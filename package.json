@@ -1,0 +1,31 @@
+{
+  "name": "kss-har",
+  "version": "1.0.0",
+  "description": "Using Device Motion Data to predict if smartphone user is standing/sitting or walking and using prediction to automatically pause/resume video",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "5.13.0",
+    "bootstrap": "4.5.0",
+    "influent": "0.5.2",
+    "jquery": "3.5.1",
+    "mobile-detect": "1.4.4",
+    "popper.js": "1.16.1",
+    "numjs": "0.16.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1",
+    "@types/bootstrap": "4.1.3"
+  },
+  "keywords": [
+    "video",
+    "recognition",
+    "prediction",
+    "machine learning",
+    "devicemotion"
+  ]
+}
